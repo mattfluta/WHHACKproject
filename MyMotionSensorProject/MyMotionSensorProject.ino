@@ -45,7 +45,7 @@ digitalWrite(trigPin, LOW);
 duration = pulseIn(echoPin, HIGH);
 // Calculating the distance
 distance= duration*0.034/2;
-if(disWall - 10 < disWall < disWall + 10)
+if(!(disWall - 10 < distance < disWall + 10))
 {
   digitalWrite(buzzPin, HIGH);
   digitalWrite(lightPin, HIGH);
