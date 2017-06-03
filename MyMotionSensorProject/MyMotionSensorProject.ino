@@ -8,6 +8,7 @@ const int buzzPin = 3;
 long duration;
 int distance;
 int disWall;
+int tol = 5;
 
 void setup() 
 {
@@ -45,7 +46,7 @@ digitalWrite(trigPin, LOW);
 duration = pulseIn(echoPin, HIGH);
 // Calculating the distance
 distance= duration*0.034/2;
-if(disWall - 10 < disWall < disWall + 10)
+if(((disWall - tol) > distance) || (distance > (disWall + tol)))
 {
   digitalWrite(lightPin, HIGH);
   delay(1000);
