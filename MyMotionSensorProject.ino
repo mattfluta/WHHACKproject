@@ -11,6 +11,7 @@ int disWall;
 
 void setup() 
 {
+  // change 
 pinMode(trigPin, OUTPUT);
 pinMode(echoPin, INPUT);
 pinMode(lightPin, OUTPUT);
